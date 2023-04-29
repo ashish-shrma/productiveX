@@ -11,9 +11,9 @@ const krona = Krona_One({
 
 export default function RootLayout({ children }: {children: React.ReactNode}) {
   return (
-    <html lang="en">
+    <html lang="en" className={krona.className}>
       <head />
-      <body className={krona.className}>
+      <body>
       <div className="bg-gray-100 min-h-screen">
         <title>My Next.js App</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

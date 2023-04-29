@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-  font-family: 'Krona One', sans-serif;
-}
 body{
     background-color: #111;
-    color: #fafafa
 }
