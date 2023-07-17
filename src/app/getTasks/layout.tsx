@@ -1,8 +1,6 @@
-'use client'
-import './globals.css'
+import '../globals.css'
 import 'tailwindcss/tailwind.css'
 import { Krona_One } from '@next/font/google'
-import { AuthContextProvider } from '@/context/AuthContext'
 
 const krona = Krona_One({
   subsets: ['latin'],
@@ -29,7 +27,7 @@ export default function RootLayout({ children }: {children: React.ReactNode}) {
         </button>
       </nav>
       <main className="p-4">      
-        <AuthContextProvider>{children}</AuthContextProvider>
+{children}
 </main>    </div>
       </body>
     </html>

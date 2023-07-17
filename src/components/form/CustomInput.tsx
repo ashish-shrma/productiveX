@@ -1,4 +1,4 @@
-export default function CustomInput(props) {
+export default function CustomInput(props: { [x: string]: any; label: any; }) {
   const { label, ...rest } = props;
   return (
     <div className="relative my-2">

@@ -16,7 +16,7 @@ export default async function getDoument(collection: string, id: string) {
 
     return { result, error };
 }
-export async function getCollection(collectionName: string) {
+export async function getCollection<T>(collectionName: string): Promise<{ result: T[]; error: Error | null }> {
     
     const collectionRef = collection(db, collectionName);
 
@@ -26,10 +26,8 @@ export async function getCollection(collectionName: string) {
     try {
         //get entire collection
         let snapshot = await getDocs(collectionRef);
-        result = snapshot.docs.map(doc => doc.data());
+    const result = snapshot.docs.map((doc) => doc.data()) as T[];
+        return { result, error: null };
     } catch (e) {
-        error = e;
-    }
-
-    return { result, error };
-}
+        return { result: [], error };
+    }}

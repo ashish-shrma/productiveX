@@ -1,5 +1,5 @@
 'use client'
-import './globals.css'
+import '../globals.css'
 import 'tailwindcss/tailwind.css'
 import { Krona_One } from '@next/font/google'
 import { AuthContextProvider } from '@/context/AuthContext'
